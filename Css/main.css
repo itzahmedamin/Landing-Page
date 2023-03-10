@@ -1,0 +1,184 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+    background-image: url(../Images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Violet);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.parent {
+    display: grid;
+} 
+.parent .parent-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 3rem;
+    position: relative;
+}
+.parent .parent-container .heading {
+    grid-column: 1/5;
+}
+.parent .parent-container .heading .head {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 13px;
+    margin-top: -2rem;
+}
+.parent .parent-container .heading .head i {
+    flex-basis: 30px;
+    font-size: 26px;
+}
+.parent .parent-container .heading img {
+    width: 92%;
+    margin-top: 2rem;
+}
+.parent .parent-container .details {
+    grid-column: 5/7;
+    color: white;
+    margin-top: 10rem;
+} 
+.parent .parent-container .details h1 {
+    width: 400px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.parent .parent-container .details p {
+    width: 500px;
+    line-height: 1.6;
+}
+.parent .parent-container .details button {
+    padding: 1rem;
+    width: 50%;
+    border: 0;
+    border-radius: 5rem;
+    color: var(--Violet);
+    font-size: 1.1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.parent .parent-container .details button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+    cursor: pointer;
+}
+.parent .parent-container .icons {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    color: white;
+    display: flex;
+    gap: 15px;
+}
+.parent .parent-container .icons i{
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: white 1px solid;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent .parent-container .icons a {
+    text-decoration: none;
+    color: white;
+}
+.parent .parent-container .icons a i:hover {
+    border-color: var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+@media (max-width: 450px) {
+    body {
+        background-image: url(../Images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: var(--Violet);
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+        padding: 4rem 4rem 0rem 4rem;
+    }
+    .parent {
+        display: flex;
+        flex-direction: column;
+    }
+    .parent .parent-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        padding: 0;
+    }
+    .parent .parent-container .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -75px;
+    }
+    .parent .parent-container .heading .head {
+        display: flex;
+        align-items: center;
+        color: white;
+    }    
+    .parent .parent-container .heading img {
+        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .parent .parent-container .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: fit-content;
+        margin-top: 4rem;
+    }
+    .parent .parent-container .details h1 {
+        width: fit-content;
+    }
+    .parent .parent-container .details p {
+        width: 330px;
+        line-height: 1.6;
+    }
+    .parent .parent-container .details button {
+        width: 75%;
+    }
+    .parent .parent-container .icons {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        color: white;
+        display: flex;
+        gap: 15px;
+        margin-top: 5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .parent .parent-container .icons i {
+        font-size: 25px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: white 1px solid;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
